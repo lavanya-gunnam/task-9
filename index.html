@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+    <title>Form Validation</title>
+    <script src="./assets/jquery.js"></script>
+</head>
+<body>
+    <div class="container p-5 bg-light mt-2">
+        <div class="h2 d-flex justify-content-center text-danger">REGISTER NOW</div>
+        <!-- name -->
+        <form>
+            <div class="row mb-3">
+                <label for="username" class="form-label">UserName</label>
+                <div class="col-md-10">
+                    <input type="text" class="form-control" id="username">
+                    <p id="usernameErr" style="color: red; display: none;">Username should contain[A-z]</p>
+                </div>
+            </div>
+
+            <!-- email -->
+            <div class="row mb-3">
+                <label for="email" class="form-label">Email</label>
+                <div class="col-md-10">
+                    <input type="text" class="form-control" id="inputEmail">
+                    <p id="emailErr" style="color: red; display: none;">Email is invalid</p>
+                </div>
+            </div>
+
+            <!-- phone number -->
+            <div class="row mb-3">
+                <label for="phonenumber" class="form-label">Phone number</label>
+                <div class="col-md-10">
+                    <input type="number" class="form-control" id="inputphonenumber" required>
+                    <p id="phonenumberErr" style="color: red; display: none;">Phone number is invalid</p>
+                </div>
+            </div>
+
+            <!-- date of birth -->
+            <div class="row mb-3">
+                <label class="form-label">Date Of Birth</label>
+                <div class="col-md-10">
+                    <input type="date" class="form-control" id="dateOfBirth">
+                    <p id="dateOfBirthrErr" style="color: red; display: none;">Please Enter a valid date</p>
+                </div>
+            </div>
+
+            <!-- password -->
+            <div class="col-md-10 mb-3">
+                <label for="exampleInputPassword1" class="form-label">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1">
+                <p id="passwordErr" style="color: red; display: none;">Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emojis.</p>
+            </div>
+
+            <!-- confirm password -->
+            <div class="col-md-10 mb-3">
+                <label for="exampleInputPassword2" class="form-label">Confirm Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword2">
+                <p id="password2Err" style="color: red; display: none;">Passwords do not match</p>
+            </div>
+            
+
+            <!-- gender -->
+            <div class="mb-3">
+                <label class="form-label">Gender:</label>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" value="male" id="male" name="gender">
+                    <label class="form-check-label" for="male">Male</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" value="female" id="female" name="gender">
+                    <label class="form-check-label" for="female">Female</label>
+                </div>
+                <p id="genderErr" style="color: red; display: none;">Please select your gender</p>
+            </div>
+            <!-- country -->
+            <div class="col-md-10 mb-3">
+                <label for="country" class="form-label">Country</label>
+                <select class="form-select" id="country" name="country" required>
+                    <option value="" disabled selected>Select your country</option>
+                    <option value="1">United States</option>
+                    <option value="2">Canada</option>
+                    <option value="3">India</option>
+                </select>
+                <p id="countryErr" style="color: red; display: none;">Please select your country</p>
+            </div>
+
+            
+           
+
+            <!-- private policy -->
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="checkbox" value="check" id="flexCheckChecked">
+                <label class="form-check-label" for="flexCheckChecked">Agree to Privacy Policy</label>
+                <p id="checkErr" style="color: red; display: none;">Please check the box</p>
+            </div>
+        </form>
+
+        <!-- Button to Open the Modal -->
+        <button type="button" class="btn btn-primary" id="submitBtn">Submit</button>
+        <!-- <button type="button" class="btn btn-primary" onclick="submitValidation()">Submit</button> -->
+    </div>
+     <div class =" mt-2 mb-3"  >
+    <div id="popupMsg" style = "display: none;background-color: rgb(92, 241, 76);" class="alert alert-secondary p-3" role="alert">
+        Congratulations! you have submitted the form !!! 
+      </div>
+    </div>
+    
+
+    <!-- Bootstrap JavaScript links -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
